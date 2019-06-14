@@ -12,8 +12,6 @@ import { MyApp } from './app.component';
 import { TimeAgoPipe} from 'time-ago-pipe';
 
 import { HomeNewsPage } from '../pages/home-news/home-news';
-import { LinkifyPipe } from '../pipes/linkify';
-import { NewlinePipe } from '../pipes/new-line';
 import { ApiAuthService } from '../services/apiAuthService';
 import { ApiStorageService } from '../services/apiStorageService';
 import { RequestInterceptor } from '../interceptors/requestInterceptor';
@@ -25,8 +23,6 @@ import { Contacts } from '@ionic-native/contacts';
   declarations: [
     MyApp,
     TimeAgoPipe,
-    LinkifyPipe,
-    NewlinePipe,
     HomeNewsPage
   ],
   imports: [
