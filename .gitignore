@@ -23,15 +23,7 @@ dist/
 node_modules/
 keys/
 tmp/
-#khong chuyen file database len vi se bi ghi de mat so lieu
-# src/app/app.component.ts
 
-db/oracle/
-
-gmap-test/
-
-
-#ignore log file service
 logs/*.log
 service.pid
 cert/*.pem
@@ -58,10 +50,7 @@ www/
 #khong day google-key
 www/index.html
 #khong day google-key
-src/index.html
 
-#khong truyen file upload len hoac xuong
-# upload_files/
 #khong truyen file screen_shot_images len
 screen_shot_images/
 platforms/
@@ -73,4 +62,3 @@ $RECYCLE.BIN/
 .DS_Store
 Thumbs.db
 UserInterfaceState.xcuserstate
-#.gitignore
