@@ -158,7 +158,7 @@ export class HomeNewsPage {
           el.short_detail = {
             avatar: "assets/imgs/ca_nau.jpg"
             , h1: "Nguyen Van Dinh"
-            , p: el.title
+            , p: el.content
             , note: el.time
             , action: { color: "primary", icon: "more", next: "MORE" }
           }
