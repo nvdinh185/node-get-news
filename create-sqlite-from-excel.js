@@ -7,7 +7,7 @@
 
 const excel_db = require('./db/sqlite3/excel-sqlite-service');
 
-const excelFilename = "./db/excel/ql-tram.cuongdq.sqlite.v8.xlsx"; //ten file excel cau hinh
-const dbFilename = "./db/database/mlmt-site-manager-v8.db";     //ten database muon tao
+const excelFilename = "./db/excel/news-setting.v1.xlsx"; //ten file excel cau hinh
+const dbFilename = "./db/database/news-v2.db";     //ten database muon tao
 
 excel_db.Excel2Sqlite.createDatabase(excelFilename, dbFilename);

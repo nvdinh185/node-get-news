@@ -124,6 +124,7 @@ export class HomeNewsPage {
   }
 
   getJsonPostNews() {
+    let linkFile = this.server + "/get-file/"
     let offset = 0;
     let limit = 2;
     let follows = [];
@@ -138,12 +139,13 @@ export class HomeNewsPage {
     }
     return this.auth.postDynamicForm(this.server + "/get-news", json_data, true)
       .then(data => {
+        console.log(data)
         let items = [];
         data.forEach(el => {
           let medias = [];
           if (el.medias) {
             el.medias.forEach(e => {
-                e.image = e.url;
+              e.image = linkFile + e.url;
               medias.push(e);
             })
           }
@@ -192,7 +194,6 @@ export class HomeNewsPage {
                 , time: new Date().getTime()
               }
             ]
-  
           }
           items.push(el);
         });

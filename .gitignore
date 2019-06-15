@@ -24,7 +24,7 @@ node_modules/
 keys/
 tmp/
 #khong chuyen file database len vi se bi ghi de mat so lieu
-src/app/app.component.ts
+# src/app/app.component.ts
 
 db/oracle/
 
@@ -61,7 +61,7 @@ www/index.html
 src/index.html
 
 #khong truyen file upload len hoac xuong
-upload_files/
+# upload_files/
 #khong truyen file screen_shot_images len
 screen_shot_images/
 platforms/
