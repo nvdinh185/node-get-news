@@ -15,8 +15,8 @@ router.post('/get-news'
 );
 
 router.get('/get-file/*'
-    //, tokenHandler.getToken
-    //, tokenHandler.verifyProxyToken
+    , tokenHandler.getTokenNext
+    , tokenHandler.verifyProxyTokenNext
     , handlers.getMediaFile
 );
 

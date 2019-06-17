@@ -23,7 +23,7 @@ export class HomeNewsPage {
     this.events.subscribe('event-main-login-checked'
       , (data) => {
         console.log("789", data)
-        this.userInfo = "766777123"
+        this.userInfo = data
         //console.log(!this.userInfo)
         this.contacts = this.apiContact.getUniqueContacts();
         Object.defineProperty(this.contacts, data, {
@@ -36,7 +36,7 @@ export class HomeNewsPage {
   }
 
   dynamicCards = {
-    title: "Đây là trang tin của Định"
+    title: ""
     , buttons: [
       { color: "primary", icon: "photos", next: "ADD" }
     ]
@@ -111,8 +111,9 @@ export class HomeNewsPage {
     if (!this.userInfo) this.getHomeNews();
     console.log("4")
   }
-
+  
   getHomeNews() {
+    this.dynamicCards.title = this.userInfo ? "Đây là trang tin của Định" : "Đây là trang tin của Public";
     console.log("456", this.contacts)
     this.getJsonPostNews()
       .then(data => {
@@ -164,9 +165,9 @@ export class HomeNewsPage {
           }
           el.results = {
             likes: {
-              like: ["like"]
-              , love: ["love"]
-              , sad: ["sad"]
+              like: []
+              , love: []
+              , sad: []
             }
             , comments: [
               {
