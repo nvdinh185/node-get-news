@@ -111,7 +111,7 @@ export class HomeNewsPage {
     if (!this.userInfo) this.getHomeNews();
     console.log("4")
   }
-  
+
   getHomeNews() {
     this.dynamicCards.title = this.userInfo ? "Đây là trang tin của Định" : "Đây là trang tin của Public";
     console.log("456", this.contacts)
