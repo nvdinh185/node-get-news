@@ -1,7 +1,7 @@
 <ion-header>
     <ion-toolbar>
         <ion-buttons start>
-            <button ion-button menuToggle color="primary">
+            <button ion-button icon-only menuToggle color="primary">
                 <ion-icon name="menu"></ion-icon>
             </button>
         </ion-buttons>
@@ -17,8 +17,8 @@
     </ion-toolbar>
 </ion-header>
 
-<ion-content no-padding>
-    <ion-grid no-padding>
+<ion-content>
+    <ion-grid>
         <ion-row>
             <ion-col *ngFor="let it of dynamicCards?.items">
                 <ion-card>
@@ -53,14 +53,11 @@
                     <ion-row no-padding *ngIf="it.results">
                         <ion-col align-self-center text-center>
                             <div *ngIf="it.results.likes">
-                                <ion-icon *ngIf="it.results.likes.like" color="primary" icon-start clear small
-                                    name="thumbs-up"></ion-icon>
-                                <ion-icon *ngIf="it.results.likes.love" color="danger" icon-start clear small
-                                    name="heart"></ion-icon>
-                                <ion-icon *ngIf="it.results.likes.sad" color="royal" icon-start clear small name="sad">
+                                <ion-icon *ngIf="it.results.likes.like" color="primary" name="thumbs-up"></ion-icon>
+                                <ion-icon *ngIf="it.results.likes.love" color="danger" name="heart"></ion-icon>
+                                <ion-icon *ngIf="it.results.likes.sad" color="royal" name="sad">
                                 </ion-icon>
-                                <ion-icon *ngIf="it.results.likes.angery" color="angery" icon-start clear small
-                                    name="ios-sad"></ion-icon>
+                                <ion-icon *ngIf="it.results.likes.angery" color="angery" name="ios-sad"></ion-icon>
                                 <ion-note>{{(it.results.likes.like?.length
                                             +it.results.likes.love?.length
                                             +it.results.likes.sad?.length
